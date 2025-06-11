@@ -1,0 +1,30 @@
+{
+  "doctype": "DocType",
+  "name": "Social Login Redirect Config",
+  "module": "Custom Social Login",
+  "fields": [
+    {
+      "fieldname": "app_name",
+      "fieldtype": "Data",
+      "label": "App Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "redirect_url",
+      "fieldtype": "Data",
+      "label": "Redirect URL",
+      "reqd": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "is_single": 0,
+  "istable": 0
+}

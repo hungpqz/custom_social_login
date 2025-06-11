@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login with Google</title>
+</head>
+<body>
+  <h2>Login with Google</h2>
+  <button onclick="loginWithGoogle('ws_hrm')">Login for ws_hrm</button>
+  <button onclick="loginWithGoogle('parent_portal')">Login for parent_portal</button>
+
+  <script>
+    function loginWithGoogle(app) {
+      const clientId = '295997853099-4hsv5037245gi9l8jf95upskvuktod3u.apps.googleusercontent.com';
+      const redirectUri = encodeURIComponent('https://dev.wellspringsaigon.edu.vn/api/method/frappe.www.login.login_via_google');
+      const state = app;
+      const scope = encodeURIComponent('email profile');
+
+      const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}` +
+                  `&redirect_uri=${redirectUri}&response_type=code&scope=${scope}&state=${state}`;
+
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
